@@ -1,0 +1,80 @@
+body, html{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  font-family:sans-serif;
+  background:#0b0f14;
+  color:white;
+}
+#homeScreen{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#0b0f14;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+#homeScreen h1,h2{text-align:center;margin:10px;}
+.menuBtn{
+  margin:10px;
+  padding:10px 30px;
+  font-size:18px;
+  cursor:pointer;
+  background:#00ffff;
+  color:#0b0f14;
+  border:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+.menuBtn:hover{background:#00aaaa;}
+#gameCanvas{display:none;}
+#score{
+  position:absolute;
+  top:16px;
+  left:16px;
+  font-size:24px;
+  color:#00ffff;
+  text-shadow:1px 1px 3px black;
+  display:none;
+}
+#gameOver{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:36px;
+  color:red;
+  display:none;
+  text-shadow:2px 2px 5px black;
+  text-align:center;
+}
+#logo{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  overflow:hidden;
+  border:5px solid rgba(255,255,255,0.1);
+  box-shadow:0 0 40px rgba(0,200,255,0.5),0 0 60px rgba(0,255,255,0.3) inset;
+  animation: rotateLogo 16s linear infinite;
+}
+#logo img{width:100%;height:100%;object-fit:cover;}
+@keyframes rotateLogo{
+  0%{transform:translateX(-50%) rotate(0deg);}
+  100%{transform:translateX(-50%) rotate(360deg);}
+}
+#leaderboardScreen{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:#0b0f14;
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
